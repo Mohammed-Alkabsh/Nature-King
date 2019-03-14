@@ -1,0 +1,772 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+header{
+  position: fixed;
+  width: 100vw;
+  height: 103px;
+  background-color: #ffffff;
+  z-index: 3;
+  border-bottom: 3px solid #d3e29d;
+}
+
+.logo-container{
+  height: 100%;
+  width: 25%;
+  float: left;
+  border-top: 3px solid #d3e29d;
+  box-sizing: border-box;
+}
+#logo{
+  height: 97px;
+  width: 240px;
+}
+.hamburger{
+  display: none;
+}
+.navs-container{
+  height: 100px;
+  background-color: #2d6b22;
+  float: right;
+  width: 75%;
+}
+.disappear{
+  display: none;
+}
+.nav-one, .nav-two{
+  height: 50px;
+} 
+.nav-two{
+  background-color: #ffffff;
+}
+.slope{
+  height: 50px;
+  width: 70px;
+  float: left;
+  overflow: hidden;
+}
+.turned-div{
+  position: relative;
+  left: -29px;
+  top: 19px;
+  height: 50px;
+  width: 100px;
+  background-color: #ffffff;
+  border: 3px solid #d3e29d;
+  transform: rotateZ(35deg);
+}
+.nav-one-child{
+  height: 50px;
+  width: 80%;
+  min-width: 600px;
+  float: right;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "social phone hours";
+}
+.social-links{
+  grid-area: social;
+  height: 50px;
+  border-right: 2px solid gray;
+  padding: 8px 10px 0 25px;
+  box-sizing: border-box;
+}
+.social-links a, .f-social-links a{
+  margin: 0 10px;
+  font-size: 25px;
+  display: inline-block;
+  color: #d3e29d;
+  transition: all 0.2s ease;
+}
+.social-links a:hover, .f-social-links a:hover{
+  color: #ffffff;
+  transform: scale(1.3) rotateZ(360deg);
+}
+
+.phone-link{
+  grid-area: phone;
+  height: 50px;
+  display: flex;
+  padding: 8px 0 0 25px;
+  box-sizing: border-box;
+  border-right: 2px solid gray;
+}
+.phone-logo-cont{
+  height: 50px;
+}
+.phone-logo-cont i{
+  font-size: 20px;
+  margin: 10px 10px 0 0;
+  color: #d3e29d;
+}
+.phone-desc-div h6, .bus-hours h6{
+  font-weight: bolder;
+  font-size: 15px;
+  margin: 0;
+  color: #f5f5f5;
+}
+.phone-desc-div a, .bus-hours p{
+  color: #ffffff;
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+.phone-desc-div a:hover{
+  text-decoration: none;
+  color: #d3e29d;
+}
+
+.bus-hrs-div{
+  grid-area: hours;
+  height: 50px;
+  display: flex;
+  padding: 8px 0 0 25px;
+  box-sizing: border-box;
+}
+.hrs-logo i{
+  font-size: 20px;
+  margin: 10px 10px 0 0;
+  color: #d3e29d;
+}
+.main-nav-cont{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.main-nav{
+  height: 100%;
+  width: auto;
+  padding: 0;
+}
+.nav-items{
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 10px;
+}
+.close-nav{
+  display: none;
+}
+.nav-items a{
+  color: #072a16;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-items a:hover{
+  color: #8ab446;
+}
+.active a{
+  color: #8ab446;
+}
+
+
+.flash-message{
+  position: absolute;
+  top: 120px;
+  z-index: 2;
+  width: 100%;
+}
+
+
+.back-top{
+  display: none;
+  position: fixed;
+  z-index: 4;
+  right: 50px;
+  bottom: 10%;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  color: #d3e29d;
+  text-decoration: none;
+  font-size: 80px;
+  background-color: #072a16;
+  border: 2px solid #d3e29d;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+.back-top i{
+  position: absolute;
+  top: -10px;
+  left: 8px;
+}
+.back-top:hover{
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+
+
+.slide-show-div{
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    overflow: hidden;
+    margin: 0;
+}
+.slide-show{
+    display: block;
+    position: relative;
+    right: 400%;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    width: 500%;
+    
+}
+.slides{
+    float: left;
+    height: 100%;
+    width: 20%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide-buttons{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: 35px;
+}
+.slide-buttons #left, .slide-buttons #right{
+    color: #ffffff;
+    background-color: rgba(138,180,70, 0.3);
+    padding: 20px 9px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s;
+    outline: none;
+} 
+.slide-buttons #left:hover, .slide-buttons #right:hover{
+  background-color: rgb(138,180,70);
+  border-color: #ffffff;
+}
+.right-button{
+    right: 0;
+}
+.left-button{
+    left: 0;
+}
+#slide-1{
+    background-image: url(https://i0.wp.com/homiku.com/wp-content/uploads/2018/12/Examples-Landscaping-Ideas-You-can-Put-in-House-Page-15.png?zoom=1.5&w=406&h=305&ssl=1);
+}
+#slide-2{
+    background-image: url(http://vplandscape.com/wp-content/themes/land2/images/sliders/01.jpg);
+}
+#slide-3{
+    background-image: url(https://st.hzcdn.com/simgs/c4a1f0c306eade01_8-2841/traditional-landscape.jpg);
+}
+#slide-4{
+    background-image: url(https://st.hzcdn.com/simgs/9dd19c1b06eaecf0_8-6664/traditional-patio.jpg);
+}
+#slide-5{
+    background-image: url(https://st.hzcdn.com/simgs/63418e8e06f99291_8-5507/traditional-landscape.jpg);
+}
+
+.slide-locator{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 140px;
+    padding: 6px 2px;
+}
+.slide-pos{
+    float: left;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin: 0 8px;
+}
+#ball{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.5s;
+    left: 10px;
+}
+
+.about-us{
+  padding: 70px 0;
+  min-height: 100vh;
+}
+.about-us-heading{
+  padding-bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+.abstract{
+  height: 9px;
+  width: 40px;
+  display: flex;
+  margin: 0 auto 40px;
+}
+.l-ab{
+  height: 100%;
+  width: 50%;
+  background-color: #2d6b22;
+}
+.r-ab{
+  height: 100%;
+  width: 50%;
+  background-color: #8ab446;
+}
+.about-us-heading h2{
+  color: #072a16;
+  margin: 0 auto;
+  display: table;
+}
+.about-us-heading h5{
+  color: gray;
+  margin: 30px auto;
+  display: table;
+}
+.ab-cont{
+  height: 260px;
+  max-width: 350px;
+  padding: 0;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.r-k-r h2{
+  color: #072a16;
+}
+.r-k-r h6{
+  margin: 30px 0;
+  color: gray;
+}
+.r-k-r a{
+  background-color: #ffffff;
+  color: #8ab446;
+  border: 2px solid #8ab446;
+  border-radius: 22px;
+  font-size: 19px;
+  font-weight: 600;
+  padding: 8px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+.r-k-r a:hover{
+  background-color: #8ab446;
+  color: #ffffff;
+}
+.v-g{
+  background-image: url(https://i1.wp.com/homiku.com/wp-content/uploads/2018/12/Examples-Landscaping-Ideas-You-can-Put-in-House-Page-03.jpg?zoom=1.5&w=459&h=306&ssl=1);
+}
+.g-g{
+  background-image: url(https://i2.wp.com/homiku.com/wp-content/uploads/2018/12/Examples-Landscaping-Ideas-You-can-Put-in-House-Page-01.jpg?zoom=1.5&w=432&h=276&ssl=1);
+}
+.showing-div{
+  height: 100%;
+  opacity: 1;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.4s;
+}
+.hidden-cont{
+  display: block;
+  height: 0;
+  background-color: #2d6b22;
+  transition: height 0.4s;
+}
+.hidden-cont h3, .hidden-cont h6{
+  margin: 20px auto;
+  color: #d3e29d;
+  text-align: center;
+}
+.services{
+  min-height: 100vh;
+  padding: 80px 0 60px;
+  background-image: linear-gradient(60deg,rgba(45,107,34,0.9),rgba(7,42,22,0.9)),url(https://wpmisc.com/sites/default/files/wallpaper/nature/73026/tropical-forest-hd-wallpapers-73026-9192944.png);
+}
+.services-heading-container{
+  width: 100%;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.l-sr{
+  height: 100%;
+  width: 50%;
+  background-color: #ffffff;
+}
+.r-sr{
+  height: 100%;
+  width: 50%;
+  background-color: #d3e29d;
+}
+.services-heading-container h2{
+  color: #f5f5f5;
+}
+.services-heading-container h5{
+  margin: 30px auto;
+  color: #d3e29d;
+}
+.serv-box{
+  background-color: #ffffff;
+  margin: 0 auto 20px;
+  padding: 0;
+  max-width: 30%;
+  transition: all 0.3s;
+}
+.serv-box-cont{
+  display: flex;
+  position: relative;
+}
+.serv-box-cont a{
+  overflow: hidden !important;
+}
+.serv-box-cont h3{
+  color: #072a16;
+}
+.service-logo{
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 20px;
+  background-color: #2d6b22;
+  z-index: 2;
+  border-radius: 50%;
+}
+.serv-svg{
+  position: relative;
+  top: 22%;
+  left: 23%;
+  transform: translate(-50% -50%);
+}
+.image-holder{
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin: 10px 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.image-holder a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.service-img{
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s;
+}
+.service-p{
+  color: #505050;
+}
+#truck-svg{
+  position: relative;
+  left: 15%;
+  top: 5%;
+}
+
+
+.appointment{
+  min-height: 100vh;
+  padding: 80px 0;
+}
+.appt-head-cont{
+  width: 100%;
+  padding-bottom: 80px;
+  text-align: center;
+  color: #072a16;
+}
+.appt-head-cont h5{
+  margin: 30px auto;
+  display: table;
+  color: #2d6b22;
+}
+
+.quick-contact{
+  border: 2px solid #dddddd;
+  background-image: url(../images/NatureKingMap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  padding: 50px 30px;
+  border-radius: 10px;
+}
+.quick-contact h2{
+  margin: 10px 0 20px;
+}
+.hours{
+  margin-top: 20px;
+}
+
+.cont-list{
+  padding: 0;
+}
+.cont-list li{
+  margin: 50px 0;
+  list-style: none;
+} 
+.cont-list li h5{
+  font-weight: 700;
+}
+.cont-list li a{
+  color: gray;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.cont-list li a:hover{
+  color: #2d6b22;
+}
+
+.cont-list li p{
+  color: #2d6b22;
+  font-weight: 500;
+}
+form{
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+}
+form p{
+  display: block;
+  margin: 20px;
+  text-align: center;
+  padding: 0 20px;
+  color: #2d6b22;
+  font-weight: 500;
+}
+input, select, textarea, .sub-btn{
+  margin: 10px auto;
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
+  height: 50px;
+  background-color: #ffffff;
+  color: gray;
+}
+textarea{
+  min-height: 150px;
+}
+.sub-btn{
+  border: 2px solid #8ab446;
+  border-radius: 20px;
+  color: #8ab446;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.4s;
+}
+.sub-btn:hover{
+  color: #ffffff;
+  background-color: #8ab446;
+}
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  border-color: #8ab446;
+}
+::placeholder{
+  color: gray ;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: gray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: gray;
+}
+
+
+.footer{
+  background-color: #072a16;
+  border-top: 3px solid #d3e29d;
+  padding: 80px 0;
+}
+.left-foot{
+  color: #8ab446;
+  margin-bottom: 40px;
+}
+.left-foot, .middle-foot, .right-foot{
+  margin-bottom: 60px;
+  text-align: center;
+  color: #8ab446;
+}
+#d-logo{
+  height: 97px;
+  width: 240px;
+}
+.left-foot h2{
+  color: #d3e29d;
+}
+.left-foot h6{
+  margin-top: 20px;
+}
+.middle-foot h2, .right-foot h2{
+  color: #d3e29d;
+}
+.footer-nav{
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.f-nav-items{
+}
+.f-nav-items a{
+  text-decoration: none;
+  color: #8ab446;
+  transition: color 0.3s;
+}
+.f-nav-items a:hover{
+  color: #d3e29d;
+}
+.f-social-links{
+  height: 50px;
+  padding: 8px 10px 0 25px;
+  margin-top: 12px;
+  box-sizing: border-box;
+}
+.closing-rule{
+  background-color: #d3e29d;
+  margin: -20px 0 40px 0;
+}
+.closing{
+  margin: 10px;
+  text-align: center;
+  color: #8ab446;
+}
+.closing h6{
+  line-height: 30px
+}
+.closing h6 a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #d3e29d;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.closing h6 a:hover{
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 930px) {
+  
+  .logo-container{
+    border-top: 3px solid #ffffff;
+  }
+  .navs-container{
+    position: absolute;
+    display: none;
+    top: 100px;
+    right: 0;
+    height: 70vh;
+    width: 65vw;
+  }
+  .hamburger{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    color: #8ab446;
+    background-color: #ffffff;
+    border: 2px solid #8ab446;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .close-nav{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0;
+    width: 40px;
+    height: 100px;
+    font-size: 40px;
+    color: green;
+    background-color: #ffffff;
+    border: 2px solid #8ab446;
+    color: #8ab446;
+  }
+  
+  .nav-one{
+    height: 50%;
+    width: 100%;
+  } 
+  .nav-one-child{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: "30% 30% 30%";
+    grid-template-areas: 
+    "social" 
+    "phone" 
+    "hours";
+    height: 100%;
+    min-width: 100px;
+    width: 100%;
+  }
+  .social-links{
+    padding: 20px;
+    text-align: center;
+    
+  }
+  .phone-link{
+    
+  }
+  .bus-hrs-div{
+    
+  }
+  .nav-two{
+    background-color: #ffffff;
+    border: 2px solid #2d6b22;
+    height: 50%;
+  }
+  .slope{
+    display: none;
+  }
+  .nav-items{
+    display: block;
+    top: 0;
+    transform: translateY( 0 );
+    margin: 10px;
+  }
+  .serv-box{
+    max-width: 100%;
+  }
+  .back-top{
+    right: 20px;
+    bottom: 20%;
+    height: 60px;
+    width: 60px;
+    font-size: 65px;
+  }
+  .back-top i{
+    top: -6px;
+    left: 8px;
+  }
+}
+

@@ -1,0 +1,271 @@
+<% include partials/header %>
+    <a class="back-top animated" href="#home"><i class="fas fa-angle-up"></i></a>
+    <div id="home" class="slide-show-div">
+        <div class="flash-message">
+          <div class="container">
+            <% if(error && error.length > 0){ %>
+      	        <div class="alert alert-danger" role="alert"><%=error%></div>
+      	    <% } %>
+      	    
+      	    <% if(success && success.length > 0){ %>
+      	        <div class="alert alert-success" role="alert"><%=success%></div>
+      	    <% } %>
+      	  </div>
+        </div>
+        <div class="slide-show">
+            <div id="slide-1" class="slides"></div>
+            <div id="slide-2" class="slides"></div>
+            <div id="slide-3" class="slides"></div>
+            <div id="slide-4" class="slides"></div>
+            <div id="slide-5" class="slides"></div>
+        </div>
+        <div class="slide-buttons right-button">
+            <button id="right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slide-buttons left-button">
+            <button id="left"><i class="fas fa-chevron-left"></i></button>
+        </div>
+        <div class="slide-locator">
+            <div id="ball"></div>
+            <div id="pos-1" class="slide-pos"></div>
+            <div id="pos-2" class="slide-pos"></div>
+            <div id="pos-3" class="slide-pos"></div>
+            <div id="pos-4" class="slide-pos"></div>
+            <div id="pos-5" class="slide-pos"></div>
+        </div>
+        
+    </div>
+    
+    <div id="about" class="about-us">
+      <div class="container">
+        
+        <div class="about-us-heading">
+          <div class="abstract">
+            <div class="l-ab"></div>
+            <div class="r-ab"></div>
+          </div>
+          <h2>About Our Company</h2>
+          <h5>We are the most trusted gardening & landscaping designers in the greater Rockford and surrounding areas.</h5>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 ab-cont">
+            <div class="card-body r-k-r">
+              <h2>Rule Nature</h2>
+              <h6>The king does not just make your gardens look nice, were here to conquer anything
+              and everything that nature brings. 
+              </h6>
+              <a class="view-work" href="#services">View Our Work</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 vision ab-cont">
+            <div class="showing-div v-g"></div>
+            <div class="card-body hidden-cont">
+              <h3>Our Vision</h3>
+              <h6>Were not just looking to make a name for ourselves, we want to make our city and homes beautiful one job at a time.</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 gaurantee ab-cont">
+            <div class="showing-div g-g"></div>
+            <div class="card-body hidden-cont">
+              <h3>Our Gaurantee</h3>
+              <h6>The king doesn't play around, thats why we offer a 100% satisfaction gaurantee or your money back.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="services" class="services">
+      <div class="container">
+        <div class="services-heading-container">
+          <div class="abstract">
+            <div class="l-sr"></div>
+            <div class="r-sr"></div>
+          </div>
+          <h2>Services</h2>
+          <h5>Commercial or residential, we got you covered!</h5>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-8 col-12 serv-box">
+            <div class="serv-box-cont card-body">
+              <h3>Grass Cutting</h3>
+              <div id="g-c-l" class="service-logo">
+                <svg class="serv-svg" viewBox="0 0 512 512" id="hills" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="55%" height="55%">
+                  <path d="M503.358 415.789A63.888 63.888 0 0 0 448 384.013a62.47 62.47 0 0 0-8.512.864l-48.864-48.864H368v-32h32v-96H208v96h32v32h-38.624l-29.104 29.104-22.256-102.4-31.264 6.8 18.928 87.056a79.181 79.181 0 0 0-25.68-4.56c-44.182-.203-80.164 35.448-80.368 79.631-.203 44.182 35.448 80.164 79.631 80.368A80.002 80.002 0 0 0 176 479.518v.496h216.896c17.735 30.503 56.84 40.854 87.343 23.119 30.504-17.736 40.855-56.841 23.119-87.344zM112 480.013c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm128-240h128v32H240v-32zm96 64v32h-64v-32h64zm48 144H190.4a80.048 80.048 0 0 0 1.6-16 79.028 79.028 0 0 0-7.696-33.68l30.32-30.32h162.752l30.528 30.528A63.616 63.616 0 0 0 384 448.013zm64 32c-17.673 0-32-14.327-32-32 0-17.673 14.327-32 32-32 17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32zM129.628 168.966l-31.27 6.797-6.797-31.27 31.27-6.798zM143.226 231.496l-31.27 6.797-6.798-31.27 31.27-6.797zM84.752 113.229l31.264-6.8L92.896.013H0v32h67.104z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="image-holder">
+              <a href="#1">
+                <img src="https://i.pinimg.com/564x/f4/22/ee/f422ee9894240e5250434b4901d55d2b.jpg" class="service-img">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="service-p">We provide grass cutting services for your home or business.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-4 col-sm-8 col-12 serv-box">
+            <div class="serv-box-cont card-body">
+              <h3>Landscaping</h3>
+              <div id="g-c-l" class="service-logo">
+                <svg class="serv-svg" viewBox="0 0 512 512" id="hills" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="55%" height="55%">
+                  <path d="M346 90c-24.814 0-45 20.186-45 45s20.186 45 45 45 45-20.186 45-45-20.186-45-45-45zM0 391.69v29.663c56.44-.677 113.134 2.353 166.271 9.15 3.16-9.629 6.868-19.138 10.99-28.55C119.986 394.316 59.326 390.971 0 391.69zM497 211c-60.308 0-120.707 19.336-168.256 54.448C247.075 325.785 187.226 410.909 181.656 512h30.062c9.241-150.557 149.141-255.813 294.78-301H497zM0 271.059v30.167c77.12-.807 156.665 4.75 229.181 16.824 7.452-9.057 15.598-17.854 24.071-26.518C175.223 277.288 87.896 270.22 0 271.059zM0 331.414V361.7c64.191-.764 129.919 2.941 191.519 11.741a357.18 357.18 0 0 1 17.353-28.111C142.96 335.347 70.378 330.692 0 331.414zM302.002 512h29.861C341.917 427.167 431.681 366.242 512 335.993v-32.296C415.578 338.051 312.003 411.508 302.002 512zM14.998 211.013C6.714 211.013 0 217.727 0 226.011v15.09c97.863-.908 195.117 7.568 280.351 24.932 9.372-8.138 19.071-16.125 29.409-23.808-89.209-20.51-190.653-31.223-294.762-31.212z"></path>
+                  <path d="M362.249 512h31.027c11.023-51.229 71.089-90.156 118.724-111.332v-32.412C448.644 394.036 372.737 444.28 362.249 512zM45 30C14.099 30 0 87.599 0 105c0 19.501 12.599 36.301 30 42.299v33.029c10.01.093 20.063.059 30 .346v-33.375C77.401 141.3 90 124.501 90 105c0-17.401-14.099-75-45-75zM0 451.348V497c0 8.291 6.709 15 15 15h136.529c.828-17.28 3.098-35.376 6.846-52.226-50.656-6.278-104.648-9.089-158.375-8.426zM425.137 512H497c8.291 0 15-6.709 15-15v-63.338c-47.316 23.282-77.884 53.174-86.863 78.338zM196 0c-43.2 0-75 59.099-75 90 0 28.801 25.8 53.101 60 58.801v41.206c10.146 1.137 20.019 2.606 30 3.955v-45.161c34.2-5.7 60-30 60-58.801 0-30.901-31.8-90-75-90zM467 0c-30.901 0-45 57.599-45 75 0 19.501 12.599 36.301 30 42.299v67.099c9.93-1.437 19.94-3.316 30-3.8v-63.3c17.401-5.999 30-22.798 30-42.299C512 57.599 497.901 0 467 0zM241.842 512h29.885C281.413 394.415 398.244 310.789 512 272.54v-31.811C380.719 282.248 251.441 376.766 241.842 512z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="image-holder">
+              <a href="#2">
+                <img src="https://i.pinimg.com/564x/b8/bf/c5/b8bfc5fbe1de5304b6defc7fa5e71597.jpg" class="service-img">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="service-p">Design planning and decoration of your gardens to give your home an extra beautiful look.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-4 col-sm-8 col-12 serv-box">
+            <div class="serv-box-cont card-body">
+              <h3>Fall Cleanup</h3>
+              <div id="g-c-l" class="service-logo">
+                <svg class="serv-svg" viewBox="0 0 512 512" id="hills" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="100%" height="100%">
+                  <path d="M116.714 112.271c11.006-11.062 24.591-20.054 33.786-25.521a19.443 19.443 0 0 1 5.088-2.11c-13.208-15.663-38.62-27.892-50.306-32.952a5.112 5.112 0 0 0-7.104 4.05c-.986 7.793-2.282 21.473-1.55 35.352 7.772 6.271 14.989 13.411 20.086 21.181zM150.487 226.251l-2.278 8.322a6.486 6.486 0 0 0 4.544 7.971 6.49 6.49 0 0 0 7.973-4.543l3.18-11.616a47.887 47.887 0 0 1-5.848.352c-2.722 0-5.226-.213-7.571-.486zM294.784 109.567a5.107 5.107 0 0 0-.25-4.563 5.11 5.11 0 0 0-3.799-2.542c-14.346-1.815-48.635-4.696-67.399 6.001a78.18 78.18 0 0 0-8.594 5.677c4.783-6.298 8.724-14.212 11.181-23.183 5.361-19.584-5.128-50.039-10.225-62.987a5.114 5.114 0 0 0-7.897-2.163c-10.981 8.546-35.521 29.411-40.885 48.996a73.568 73.568 0 0 0-1.976 9.757c.99.235 1.968.528 2.923.921 5.626 2.317 9.898 7.217 11.428 13.111 3.917 15.115 9.188 42.135 3.625 62.607 7.256 2.523 14.085 5.778 19.587 8.721a19.517 19.517 0 0 1 10.09 14.452 19.525 19.525 0 0 1-4.944 15.877c2.453 2.331 5.151 4.577 8.337 6.414 12.37 7.129 34.392 5.893 45.449 4.696a5.115 5.115 0 0 0 4.123-7.156c-3.985-8.987-12.242-25.4-22.649-34.012a77.021 77.021 0 0 0 12.38-5.682c18.762-10.697 33.749-41.673 39.495-54.942z"></path>
+                  <path d="M196.428 190.281a4.462 4.462 0 0 0-1.002-7.134c-7.564-4.046-22.049-10.91-33.828-11.252a67.275 67.275 0 0 0 5.47-10.55c7.173-17.427.867-46.777-2.298-58.989a4.462 4.462 0 0 0-6.597-2.716c-10.843 6.446-35.982 22.858-43.153 40.284a67.754 67.754 0 0 0-2.867 8.517c-.088-6.899-1.621-14.459-4.743-21.948-6.817-16.351-30.37-31.678-40.822-37.853a4.46 4.46 0 0 0-3.985-.276 4.462 4.462 0 0 0-2.61 3.024c-2.971 11.771-8.663 39.289-1.846 55.641 3.121 7.489 7.41 13.899 12.25 18.816a68.314 68.314 0 0 0-8.066-3.956c-5.845-2.405-13.033-3.294-20.464-3.295-14.725 0-30.409 3.49-38.524 5.594a4.46 4.46 0 0 0-2.715 6.597c6.446 10.844 22.856 35.982 40.283 43.153a67.313 67.313 0 0 0 11.344 3.541c-8.049 8.607-13.369 23.728-15.818 31.947a4.46 4.46 0 0 0 4.274 5.735l.089-.001c9.701-.191 28.895-1.57 38.806-9.112 5.26-4.004 8.552-9.277 11.955-13.615a15.519 15.519 0 0 1 14.715-5.728 15.522 15.522 0 0 1 11.811 9.355l12.894 30.93a5.663 5.663 0 0 0 7.405 3.046 5.66 5.66 0 0 0 3.047-7.402l-12.917-30.983a15.46 15.46 0 0 1 1.635-14.857 15.459 15.459 0 0 1 14.408-6.455c4.174.484 8.691 1.397 13.502 1.397a32.93 32.93 0 0 0 4.582-.307c12.331-1.729 26.82-14.392 33.785-21.148z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="image-holder">
+              <a href="#3">
+                <img src="http://demo3.steelthemes.com/grd/wp-content/uploads/sites/2/2018/07/shutterstock_482097559_small_tiny-1000x562-480x260.jpg" class="service-img">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="service-p">Leaves piling up? Call us and we'll get rid of them for you and leave your yards looking clean and green.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-4 col-sm-8 col-12 serv-box">
+            <div class="serv-box-cont card-body">
+              <h3>Snow Removal</h3>
+              <div id="g-c-l" class="service-logo">
+                <svg class="serv-svg" viewBox="0 0 512 512" id="hills" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="55%" height="55%">
+                  <path d="M266.432 389.195l-19.862-19.221 19.862-19.221c5.953-5.761 6.108-15.257.348-21.21-5.762-5.953-15.258-6.109-21.211-.348l-26.638 25.779h-41.51a44.511 44.511 0 0 0-1.819-4.392l29.594-29.608h36.211c8.284 0 15-6.716 15-15s-6.716-15-15-15H213.98v-27.427c0-8.284-6.716-15-15-15s-14.9 6.716-14.9 15v36.215l-29.694 29.607a44.73 44.73 0 0 0-4.386-1.816v-41.367l25.606-25.606c5.858-5.858 5.858-15.355 0-21.213-5.857-5.858-15.355-5.858-21.213 0L135 258.76l-19.394-19.394c-5.857-5.858-15.355-5.858-21.213 0-5.858 5.858-5.858 15.355 0 21.213L120 286.186v41.367a44.511 44.511 0 0 0-4.392 1.819L85.98 299.757v-36.211c0-8.284-6.716-15-15-15s-14.9 6.716-14.9 15v27.427H28.553c-8.284 0-15 6.716-15 15s6.716 15 15 15h36.215l29.628 29.614a44.875 44.875 0 0 0-1.816 4.386H51.214l-25.607-25.607c-5.857-5.858-15.355-5.858-21.213 0-5.858 5.858-5.858 15.355 0 21.213l19.394 19.393-19.394 19.394c-5.859 5.858-5.859 15.355 0 21.213 5.857 5.857 15.355 5.858 21.213 0l25.607-25.607H92.58a44.612 44.612 0 0 0 1.816 4.385l-29.628 29.615H28.553c-8.284 0-15 6.716-15 15s6.716 15 15 15H56.08v27.427c0 8.284 6.616 15 14.9 15s15-6.716 15-15v-36.211l29.628-29.615a44.755 44.755 0 0 0 4.392 1.819v41.367l-25.606 25.606c-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.858 21.213 0L135 481.186l19.394 19.394c5.857 5.857 15.355 5.858 21.213 0 5.858-5.858 5.858-15.355 0-21.213L150 453.76v-41.367a44.73 44.73 0 0 0 4.386-1.816l29.694 29.608v35.855c0 8.284 6.616 15 14.9 15s15-6.716 15-15v-27.066h27.086c8.284 0 15-6.716 15-15s-6.716-15-15-15h-35.871l-29.594-29.608a44.857 44.857 0 0 0 1.819-4.392h41.51l26.638 25.779c5.958 5.764 15.454 5.602 21.211-.348 5.761-5.953 5.606-15.449-.347-21.21zm-131.431-4.222c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.73 15-15 15zM225.001 84.971h-47.58a45.032 45.032 0 0 0-8.233-14.214l23.804-41.229c4.143-7.172 1.685-16.346-5.49-20.488-7.174-4.143-16.349-1.684-20.49 5.49L143.22 55.738a45.06 45.06 0 0 0-8.218-.766c-2.808 0-5.552.271-8.219.766L102.992 14.53c-4.142-7.175-13.316-9.631-20.49-5.49-7.175 4.142-9.633 13.316-5.49 20.49l23.803 41.229a44.99 44.99 0 0 0-8.233 14.213h-47.58c-8.284 0-15 6.716-15 15s6.716 15 15 15h47.58a44.99 44.99 0 0 0 8.233 14.213l-23.803 41.229c-4.143 7.175-1.685 16.348 5.49 20.49 7.173 4.141 16.347 1.686 20.49-5.49l23.791-41.208c2.667.494 5.411.766 8.219.766s5.552-.271 8.218-.766l23.792 41.208c4.142 7.174 13.315 9.632 20.49 5.49 7.175-4.142 9.633-13.316 5.49-20.49l-23.804-41.229a44.983 44.983 0 0 0 8.233-14.214h47.58c8.284 0 15-6.716 15-15s-6.716-15-15-15zm-89.999 30.002c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zM467 174.972h-47.58a45.032 45.032 0 0 0-8.233-14.214l23.804-41.229c4.143-7.174 1.685-16.348-5.49-20.49-7.175-4.143-16.348-1.684-20.49 5.49l-23.792 41.208a45.06 45.06 0 0 0-8.218-.766c-2.808 0-5.552.271-8.219.766l-23.791-41.208c-4.143-7.175-13.317-9.631-20.49-5.49-7.175 4.142-9.633 13.316-5.49 20.49l23.803 41.229a45.008 45.008 0 0 0-8.233 14.213h-47.58v.002c-8.284 0-15 6.716-15 15s6.716 15 15 15h47.58a45.008 45.008 0 0 0 8.233 14.213l-23.803 41.229c-4.143 7.175-1.685 16.348 5.49 20.49 7.173 4.141 16.347 1.685 20.49-5.49l23.791-41.208c2.667.494 5.411.766 8.219.766s5.552-.271 8.218-.766l23.792 41.208c4.142 7.174 13.315 9.632 20.49 5.49 7.175-4.142 9.633-13.316 5.49-20.49l-23.804-41.229a44.983 44.983 0 0 0 8.233-14.214H467c8.284 0 15-6.716 15-15s-6.716-15-15-15zm-89.998 30.001c-8.271 0-15-6.729-15-15s6.728-15 15-15c8.271 0 15 6.729 15 15s-6.729 15-15 15z"></path>
+                  <path d="M407.002 384.973h-15v-15c0-8.284-6.716-15-15-15s-15 6.716-15 15v15h-15c-8.284 0-15 6.716-15 15s6.716 15 15 15h15v15c0 8.284 6.716 15 15 15s15-6.716 15-15v-15h15c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="image-holder">
+              <a href="#4">
+                <img src="https://i.pinimg.com/564x/82/54/6c/82546cc192ce6748fc9397d614cdbc8c.jpg" class="service-img">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="service-p">When it snows call we'll be there to clean it up and leave your drive way looking clean and free from snow and ice all winter long.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-4 col-sm-8 col-12 serv-box">
+            <div class="serv-box-cont card-body">
+              <h3>Lawn & Garden<br> Care</h3>
+              <div id="g-c-l" class="service-logo">
+                <svg class="serv-svg" viewBox="0 0 512 512" id="hills" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="55%" height="55%">
+                  <path d="M96 440.608V384H64v56.64A95.501 95.501 0 0 0 0 416v32c35.346 0 64 28.654 64 64h32c.037-30.402 21.421-56.597 51.2-62.72l-6.4-31.376A95.056 95.056 0 0 0 96 440.608zM272 384h-32v56.64A95.501 95.501 0 0 0 176 416v32c35.346 0 64 28.654 64 64h32c0-35.346 28.654-64 64-64v-32a95.501 95.501 0 0 0-64 24.64V384zM448 384h-32v56.608a95.056 95.056 0 0 0-44.8-22.704l-6.4 31.376c29.779 6.123 51.163 32.318 51.2 62.72h32c0-35.346 28.654-64 64-64v-32a95.501 95.501 0 0 0-64 24.64V384zM176 48h32v96h-32v240h32V176h96v208h32V144h-32V48h32V16H176v32zm64 0h32v96h-32V48zM352 80h32v32h-32zM416 32h32v32h-32zM416 128h32v32h-32zM480 0h32v32h-32zM480 160h32v32h-32zM480 80h32v32h-32zM128 80h32v32h-32zM64 32h32v32H64zM64 128h32v32H64zM0 0h32v32H0zM0 160h32v32H0zM0 80h32v32H0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="image-holder">
+              <a href="#5">
+                <img src="https://i.pinimg.com/564x/74/5d/56/745d56a184a72e4b65cf7b6d1c732b33.jpg" class="service-img">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="service-p">We provide grass cutting services for your home or business.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-4 col-sm-8 col-12 serv-box">
+            <div class="serv-box-cont card-body">
+              <h3>Tree Removal & <br>Hauling</h3>
+              <div id="g-c-l" class="service-logo">
+                <svg id="truck-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 24 24" height="70%" id="Layer_1" version="1.1" fill="#ffffff" viewBox="0 0 24 24" width="70%" xml:space="preserve"><g><path d="M23,14l-2-4c-0.2-0.5-0.7-1-1.3-1H16c0-0.6-0.4-1-1-1H1C0.4,8,0,8.4,0,9v12c0,0.6,0.4,1,1,1h2.2c0.4,1.2,1.5,2,2.8,2   s2.4-0.8,2.8-2H16h0.2c0.4,1.2,1.5,2,2.8,2s2.4-0.8,2.8-2H23c0.6,0,1-0.4,1-1v-6C24,14.4,23.6,14,23,14z M6,23c-1.1,0-2-0.9-2-2   s0.9-2,2-2s2,0.9,2,2S7.1,23,6,23z M15,20H8.8c-0.4-1.2-1.5-2-2.8-2s-2.4,0.8-2.8,2H2v-3h13V20z M15,16H2v-6h13V16z M16,11h3.5   l1.5,3h-5V11z M19,23c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S20.1,23,19,23z M22,20h-0.2c-0.4-1.2-1.5-2-2.8-2s-2.4,0.8-2.8,2H16v-5   h6V20z"/><circle cx="6" cy="21" r="1"/><circle cx="19" cy="21" r="1"/></g></svg>
+              </div>
+            </div>
+            <div class="image-holder">
+              <a href="#6">
+                <img src="https://i.pinimg.com/564x/9f/32/9c/9f329c30f72caac9e53a2f4dc20e36af.jpg" class="service-img">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="service-p">Wether it's old furniture or a tree that needs removal, we have the resources and manpower to cut, chop, and haul it away.</p>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    <div id="contact" class="appointment">
+      <div class="container">
+        
+        <div class="appt-head-cont">
+          <div class="abstract">
+            <div class="l-ab"></div>
+            <div class="r-ab"></div>
+          </div>
+          <h2>Hi, here you can reach out to us for any inquiry</h2>
+          <h5>There are lots of ways to stay touch with us.</h5>
+        </div>
+        <div class="row">
+          <div class="quick-contact col-lg-4 col-md-6 col-sm-12 col-12">
+            <h2>Quick Contact</h2>
+            <ul class="cont-list">
+              <li>
+                <h5>PHONE</h5>
+                <a href="tel: 1-779-771-2798">1-779-771-2798</a>
+              </li>
+              <li>
+                <h5>E-MAIL</h5>
+                <a href="mailto:webmaster@example.com">NatureKing@yahoo.com</a>
+              </li>
+              <li>
+                <h5>WORKING HOURS</h5>
+                <div class="hours">
+                    <h6>MONDAY-SATURDAY:</h6>
+                    <p>8:00AM - 6:00PM</p>
+                </div>
+                <div class="hours">
+                    <h6>SUNDAY:</h6>
+                    <p>8:00AM - 12:00PM</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <form action="/submit" method="POST" class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <p>Feel free to ask any landscaping or gardening questions over the phone, or get in touch via our contact form.</p>
+            <div class="row">
+              <input class="col-lg-5 col-md-5 col-sm-10 col-10" type="text" name="name" placeholder="Name *" required>
+              <input class="col-lg-5 col-md-5 col-sm-10 col-10" type="email" name="email" placeholder="E-mail *" required>
+              <input class="col-lg-5 col-md-5 col-sm-10 col-10" type="tel" name="phone" placeholder="Phone *" required>
+              <select class="col-lg-5 col-md-5 col-sm-10 col-10" name="service">
+                <option value="Any" selected disabled>Pick Service</option>
+                <option id="1" value="Grass Cutting">Grass Cutting</option>
+                <option id="2" value="Landscaping">Landscaping</option>
+                <option id="3" value="Fall Cleanup">Fall Cleanup</option>
+                <option id="4" value="Snow Removal">Snow Removal</option>
+                <option id="5" id="1" value="Lawn Garden">Lawn & Garden Care</option>
+                <option id="6" value="Tree Removal">Tree Removal & Hauling</option>
+                <option id="7" value="Other">Other</option>
+              </select>
+              <input class="col-lg-10 col-md-10 col-sm-10 col-10" type="text" name="subject" placeholder="Subject *" required>
+              <textarea class="col-lg-10 col-md-10 col-sm-10 col-10" name="message" placeholder="Your Message" required></textarea>
+              <button class="sub-btn col-lg-8 col-md-8 col-sm-10 col-10" type="submit">SEND YOUR MESSAGE</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  
+<% include partials/footer %>
