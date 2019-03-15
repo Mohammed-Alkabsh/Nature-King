@@ -13,17 +13,9 @@ $(document).ready(function(){
         if( $(window).height() <= $(window).width() ){
             $(".nav-one-child").css("display", "flex");
             $(".nav-items").css("display", "inline-block");
-            $(".navs-container").css({
-                "height": "250px",
-                "width": "500px"
-            });
         }else{
             $(".nav-one-child").css("display", "grid");
             $(".nav-items").css("display", "flex");
-            $(".navs-container").css({
-                "height": "430px",
-                "width": "230px"
-            });
         }
     });
     
