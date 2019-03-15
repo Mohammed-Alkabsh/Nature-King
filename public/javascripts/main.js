@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     //Making the navigation bar responsive
-    $(window).on("resize", function(){
+    $(window).on("resize load", function(){
         console.log($(window).width());
         if( $(window).width() >= 930 && $(".navs-container").hasClass("bounceOutRight")){
             $(".navs-container").css("display", "block");
@@ -9,6 +9,13 @@ $(document).ready(function(){
         }else if($(window).width() <= 930 && $(".navs-container").hasClass("fadeIn")){
             $(".navs-container").css("display", "none");
             $(".navs-container").removeClass("fadeIn");
+        }
+        if( $(window).height() <= $(window).width() ){
+            $(".nav-one-child").css("display", "flex");
+            $(".nav-items").css("display", "inline-block");
+        }else{
+            $(".nav-one-child").css("display", "grid");
+            $(".nav-items").css("display", "flex");
         }
     });
     
