@@ -22,7 +22,7 @@ router.post("/submit", function(req, res){
         message = req.body.message;
         
     const output = `
-    <p style="background: green; color: green; padding: 20px 50px; font-weight: 500; font-size: 20px;">You have a new contact</p>
+    <p>You have a new contact</p>
     <h3>Contact Details:</h3>
     <ul>
       <li>Name: ${name}</li>
@@ -47,7 +47,7 @@ router.post("/submit", function(req, res){
     
     let mailOptions = {
         from: '"Nature King Job Request" <naturekingwebsite@gmail.com>', // sender address
-        to: "alkabsh_mohammed@yahoo.com", // list of receivers
+        to: "naturekingofrockford@gmail.com", // list of receivers
         subject: subject, // Subject line
         text: "Hello world?", // plain text body
         html: output // html body
