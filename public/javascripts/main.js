@@ -10,7 +10,7 @@ $(document).ready(function(){
             $(".navs-container").css("display", "none");
             $(".navs-container").removeClass("fadeIn");
         }
-        if( $(window).height() <= $(window).width() ){
+        if( $(window).height() <= $(window).width() && $(window).width() <= 930){
             $(".nav-one-child").css("display", "flex");
             $(".nav-items").css("display", "inline-block");
         }else{
