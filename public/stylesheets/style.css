@@ -65,7 +65,6 @@ header{
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-areas: "social phone hours";
-  background: blue;
 }
 .social-links{
   grid-area: social;
