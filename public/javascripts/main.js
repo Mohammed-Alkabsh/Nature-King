@@ -10,13 +10,7 @@ $(document).ready(function(){
             $(".navs-container").css("display", "none");
             $(".navs-container").removeClass("fadeIn");
         }
-        if( $(window).height() <= $(window).width() ){
-            $(".nav-one-child").css("display", "flex");
-            $(".nav-items").css("display", "inline-block");
-        }else{
-            $(".nav-one-child").css("display", "grid");
-            $(".nav-items").css("display", "flex");
-        }
+        
     });
     
     

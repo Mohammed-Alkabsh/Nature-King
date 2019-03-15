@@ -69,7 +69,7 @@ header{
 .social-links{
   grid-area: social;
   height: 50px;
-  border-right: 2px solid gray;
+  border-right: 2px solid #8ab446;
   padding: 8px 10px 0 25px;
   box-sizing: border-box;
 }
@@ -91,7 +91,7 @@ header{
   display: flex;
   padding: 8px 0 0 25px;
   box-sizing: border-box;
-  border-right: 2px solid gray;
+  border-right: 2px solid #8ab446;
 }
 .phone-logo-cont{
   height: 50px;
@@ -682,8 +682,17 @@ input:focus, select:focus, textarea:focus{
     display: none;
     top: 100px;
     right: 0;
-    height: 70vh;
-    width: 65vw;
+    height: 150px;
+    width: 650px;
+  }
+  .nav-one-child{
+    height: 50px;
+    width: 80%;
+    min-width: 600px;
+    float: left;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "social phone hours";
   }
   .hamburger{
     display: inline-block;
@@ -717,28 +726,10 @@ input:focus, select:focus, textarea:focus{
     height: 50%;
     width: 100%;
   } 
-  .nav-one-child{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: "30% 30% 30%";
-    grid-template-areas: 
-    "social" 
-    "phone" 
-    "hours";
+  .social-links, .phone-link, .bus-hrs-div{
+    padding: 10px 20px;
     height: 100%;
-    min-width: 100px;
-    width: 100%;
-  }
-  .social-links{
-    padding: 20px;
-    text-align: center;
-    
-  }
-  .phone-link{
-    
-  }
-  .bus-hrs-div{
-    
+    border: none;
   }
   .nav-two{
     background-color: #ffffff;
@@ -747,12 +738,6 @@ input:focus, select:focus, textarea:focus{
   }
   .slope{
     display: none;
-  }
-  .nav-items{
-    display: block;
-    top: 0;
-    transform: translateY( 0 );
-    margin: 10px;
   }
   .serv-box{
     max-width: 100%;
@@ -770,3 +755,27 @@ input:focus, select:focus, textarea:focus{
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .navs-container{
+    height: 440px;
+    width: 240px;
+  }
+  .nav-items{
+    display: block;
+    top: 0;
+    transform: translateY( 0 );
+    margin: 10px;
+  }
+  .nav-one-child{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: "30% 30% 30%";
+    grid-template-areas: 
+    "social" 
+    "phone" 
+    "hours";
+    height: 100%;
+    min-width: 100px;
+    width: 100%;
+  }
+}
