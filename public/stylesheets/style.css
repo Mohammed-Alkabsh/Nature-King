@@ -683,7 +683,7 @@ input:focus, select:focus, textarea:focus{
     top: 100px;
     right: 0;
     height: 430px;
-    width: 200px;
+    width: 220px;
   }
   .hamburger{
     display: inline-block;
