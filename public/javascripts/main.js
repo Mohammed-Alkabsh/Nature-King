@@ -47,9 +47,11 @@ $(document).ready(function(){
     }, 500);
     
     
-    var slideShowInterval = setInterval(function(){
+    
+    var slideShowInterval = setTimeout(function(){
         executeSlideShow();
-    }, 10000);
+        slideShowInterval;
+    }, 5000);
     function executeSlideShow(){
         if( index >= slidesPosition.length - 1){
             index = 0;
@@ -60,13 +62,26 @@ $(document).ready(function(){
         $("#ball").css("left", ballPosition[index]);
         $(".slide-show").animate({
             right: slidesPosition[index]
-        }, 500);
+        }, 500, function(){
+            setTimeout(function(){
+                executeSlideShow();
+            }, 5000);
+        });
     }
     //Calling The Interval
     slideShowInterval;
     //Making SlideShow Buttons Functionality
     $("#right").on("click", function(){
-        executeSlideShow();
+        if( index >= slidesPosition.length - 1){
+            index = 0;
+        }
+        else{
+            index++;
+        }
+        $("#ball").css("left", ballPosition[index]);
+        $(".slide-show").animate({
+            right: slidesPosition[index]
+        }, 500);
     });
     $("#left").on("click", function(){
         if( index <= 0 ){
