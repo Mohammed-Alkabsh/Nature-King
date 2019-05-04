@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require("nodemailer");
 
+console.log(process.env.AUTHUSER);
+console.log(process.env.AUTHPASS)
 /* GET home page. */
 router.get('/', function(req, res) {
     res.render('index');
@@ -40,8 +42,8 @@ router.post("/submit", function(req, res){
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-          user: "" + process.env.AUTHUSER + "", // generated ethereal user
-          pass: "" + process.env.AUTHPASS + "" // generated ethereal password
+          user: process.env.AUTHUSER, // generated ethereal user
+          pass: process.env.AUTHPASS // generated ethereal password
         }
     });
     
