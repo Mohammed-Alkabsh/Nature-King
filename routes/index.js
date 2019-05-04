@@ -40,14 +40,14 @@ router.post("/submit", function(req, res){
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-          user: "naturekingwebsite@gmail.com", // generated ethereal user
-          pass: "natureking#1" // generated ethereal password
+          user: process.env.AUTHUSER, // generated ethereal user
+          pass: process.env.AUTHPASS // generated ethereal password
         }
     });
     
     let mailOptions = {
-        from: '"Nature King Job Request" <naturekingwebsite@gmail.com>', // sender address
-        to: "naturekingofrockford@gmail.com", // list of receivers
+        from: '"Nature King Job Request" <' + process.env.SENDER + '>', // sender address
+        to: process.env.RECIEVER, // list of receivers
         subject: subject, // Subject line
         text: "Hello world?", // plain text body
         html: output // html body
